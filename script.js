@@ -36,3 +36,6 @@ $("#5pm-hour .description").val(localStorage.getItem("5pm-hour"));
 function timeTracker() {
     var currentHour = moment().hour(); // pulls from moment.js 
     
+    (".time-block").each(function () {// loop through time blocks
+        var blockHour = parseInt($(this).attr("id").split("hour")[1]);
+        console.log( blockHour, currentHour)
