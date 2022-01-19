@@ -58,5 +58,5 @@ function timeTracker() {
         }
     })
 }
-timeTracker(); //starts funcation all over 
+timeTracker(); //re-starts funcation all over 
 })
