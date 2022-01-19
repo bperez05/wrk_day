@@ -39,3 +39,24 @@ function timeTracker() {
     (".time-block").each(function () {// loop through time blocks
         var blockHour = parseInt($(this).attr("id").split("hour")[1]);
         console.log( blockHour, currentHour)
+
+        //goes through css/html given classes of past, present, or future.
+        if (blockHour < currentHour) {
+            $(this).addClass("past");
+            $(this).removeClass("future");
+            $(this).removeClass("present");
+        }
+        else if (blockHour === currentHour) {
+            $(this).removeClass("past");
+            $(this).addClass("present");
+            $(this).removeClass("future");
+        }
+        else {
+            $(this).removeClass("present");
+            $(this).removeClass("past");
+            $(this).addClass("future");
+        }
+    })
+}
+timeTracker(); //starts funcation all over 
+})
