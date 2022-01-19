@@ -33,3 +33,6 @@ $("#4pm-hour .description").val(localStorage.getItem("4pm-hour"));
 
 $("#5pm-hour .description").val(localStorage.getItem("5pm-hour"));
 
+function timeTracker() {
+    var currentHour = moment().hour(); // pulls from moment.js 
+    
